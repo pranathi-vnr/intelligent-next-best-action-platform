@@ -1,0 +1,107 @@
+{
+  "name": "Recommendation",
+  "type": "object",
+  "properties": {
+    "customer_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "action_type": {
+      "type": "string",
+      "enum": [
+        "Follow Up",
+        "Send Proposal",
+        "Schedule Demo",
+        "Escalate",
+        "Upsell",
+        "Address Risk",
+        "Share Content",
+        "Request Meeting",
+        "Custom"
+      ]
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "Critical",
+        "High",
+        "Medium",
+        "Low"
+      ],
+      "default": "Medium"
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "reasoning": {
+      "type": "string",
+      "description": "Explanation of why this action is recommended"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Supporting evidence references"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Pending Review",
+        "Accepted",
+        "Rejected",
+        "Executed",
+        "Expired"
+      ],
+      "default": "Pending Review"
+    },
+    "review_notes": {
+      "type": "string"
+    },
+    "reviewed_by": {
+      "type": "string"
+    },
+    "reviewed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "executed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "due_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "impact_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "source_interaction_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source_knowledge_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "customer_id",
+    "title",
+    "description",
+    "action_type"
+  ]
+}

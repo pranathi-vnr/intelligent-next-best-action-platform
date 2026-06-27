@@ -1,0 +1,70 @@
+{
+  "name": "KnowledgeArticle",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Playbook",
+        "Best Practice",
+        "Product Documentation",
+        "Case Study",
+        "Competitive Intel",
+        "Pricing Guide",
+        "Objection Handling",
+        "Industry Research"
+      ]
+    },
+    "content": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "applicable_stages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "applicable_industries": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "effectiveness_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "default": 50
+    },
+    "usage_count": {
+      "type": "number",
+      "default": 0
+    },
+    "author": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Draft",
+        "Published",
+        "Archived"
+      ],
+      "default": "Published"
+    }
+  },
+  "required": [
+    "title",
+    "category",
+    "content"
+  ]
+}

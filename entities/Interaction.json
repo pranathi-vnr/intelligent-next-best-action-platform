@@ -1,0 +1,75 @@
+{
+  "name": "Interaction",
+  "type": "object",
+  "properties": {
+    "customer_id": {
+      "type": "string",
+      "description": "Related customer ID"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "Meeting Notes",
+        "Email",
+        "Call Transcript",
+        "CRM Update",
+        "Chat",
+        "Support Ticket"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string",
+      "description": "Full content of the interaction"
+    },
+    "summary": {
+      "type": "string",
+      "description": "AI-generated summary"
+    },
+    "sentiment": {
+      "type": "string",
+      "enum": [
+        "Positive",
+        "Neutral",
+        "Negative",
+        "Mixed"
+      ]
+    },
+    "key_topics": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "participants": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "action_items": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "interaction_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source": {
+      "type": "string"
+    },
+    "file_url": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "customer_id",
+    "type",
+    "title",
+    "content"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "AgentMemory",
+  "type": "object",
+  "properties": {
+    "memory_type": {
+      "type": "string",
+      "enum": [
+        "Recommendation Outcome",
+        "User Preference",
+        "Pattern",
+        "Context"
+      ]
+    },
+    "customer_id": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "relevance_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "default": 50
+    },
+    "source": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "memory_type",
+    "content"
+  ]
+}

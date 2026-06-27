@@ -1,0 +1,62 @@
+{
+  "name": "AnalysisRun",
+  "type": "object",
+  "properties": {
+    "customer_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Running",
+        "Completed",
+        "Failed"
+      ],
+      "default": "Running"
+    },
+    "steps_completed": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "current_step": {
+      "type": "string"
+    },
+    "results_summary": {
+      "type": "string"
+    },
+    "opportunities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "risks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "missing_info": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "recommendations_generated": {
+      "type": "number",
+      "default": 0
+    },
+    "error_message": {
+      "type": "string"
+    },
+    "duration_seconds": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "customer_id",
+    "status"
+  ]
+}

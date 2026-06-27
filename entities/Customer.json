@@ -1,0 +1,88 @@
+{
+  "name": "Customer",
+  "type": "object",
+  "properties": {
+    "company_name": {
+      "type": "string",
+      "description": "Company name"
+    },
+    "industry": {
+      "type": "string",
+      "enum": [
+        "SaaS",
+        "FinTech",
+        "HealthTech",
+        "E-Commerce",
+        "EdTech",
+        "MarTech",
+        "HRTech",
+        "Other"
+      ]
+    },
+    "contact_name": {
+      "type": "string",
+      "description": "Primary contact name"
+    },
+    "contact_email": {
+      "type": "string",
+      "format": "email"
+    },
+    "contact_role": {
+      "type": "string"
+    },
+    "journey_stage": {
+      "type": "string",
+      "enum": [
+        "Prospect",
+        "Qualification",
+        "Demo",
+        "Proposal",
+        "Negotiation",
+        "Closed Won",
+        "Onboarding",
+        "Active",
+        "At Risk",
+        "Churned"
+      ],
+      "default": "Prospect"
+    },
+    "health_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "default": 50
+    },
+    "arr": {
+      "type": "number",
+      "description": "Annual Recurring Revenue",
+      "default": 0
+    },
+    "deal_size": {
+      "type": "number",
+      "default": 0
+    },
+    "logo_url": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "last_interaction_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "assigned_to": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "company_name",
+    "journey_stage"
+  ]
+}

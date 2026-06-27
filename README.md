@@ -1,77 +1,209 @@
-# Base44 Project
+# 🚀 Intelligent Next Best Action Platform
 
-Use this repository to run and edit the app locally, then publish changes back through Base44.
+An AI-powered **Agentic Decision Intelligence Platform** that transforms customer interactions, enterprise knowledge, and business context into intelligent, explainable, and actionable recommendations.
 
-Any change pushed to the repo will also be reflected in the Base44 Builder.
+The platform enables Customer Success and business teams to analyze customer interactions, identify risks and opportunities, and recommend the most effective next best actions through an intelligent multi-agent workflow.
 
-## Prerequisites
+---
 
-1. Clone the repository using the project's Git URL.
-2. Navigate to the project directory.
-3. Install dependencies: `npm install`.
-4. Install the Base44 CLI: `npm install -g base44@latest`.
+## ✨ Features
 
-See the [Base44 CLI docs](https://docs.base44.com/developers/references/cli/get-started/overview) if you want to run Base44 commands directly.
+* 🤖 Planner-Based Multi-Agent AI Workflow
+* 💡 AI-Powered Next Best Action Recommendations
+* 📄 Customer Interaction & Meeting Analysis
+* 📚 Enterprise Knowledge Retrieval
+* 📊 Customer Health Monitoring
+* ⚠️ Risk & Opportunity Detection
+* 📈 Explainable AI Recommendations with Confidence Scores
+* 👤 Human-in-the-Loop Decision Support
+* 🕒 Customer Journey Timeline
+* 📱 Modern Responsive Dashboard
 
-## Run Locally
+---
 
-Run the full local development environment from the project root:
+## 🏗️ System Workflow
+
+```text
+                    Customer Interaction
+                            │
+                            ▼
+                    Planner Agent
+                            │
+      ┌─────────────────────┼─────────────────────┐
+      ▼                     ▼                     ▼
+ CRM Analysis        Knowledge Agent     Meeting Analysis
+      │                     │                     │
+      └─────────────────────┼─────────────────────┘
+                            ▼
+                 Risk Detection Agent
+                            │
+                            ▼
+              Recommendation Generation
+                            │
+                            ▼
+               Human Review & Approval
+                            │
+                            ▼
+                 Customer Memory Update
+```
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* React
+* Vite
+* JavaScript
+* Tailwind CSS
+* React Router
+* TanStack Query
+* Radix UI
+* Lucide React
+* Recharts
+* Framer Motion
+
+### AI & Business Intelligence
+
+* Multi-Agent Decision Workflow
+* Customer Context Analysis
+* Risk Assessment
+* Business Rule Evaluation
+* Recommendation Engine
+
+---
+
+## 📂 Project Structure
+
+```text
+intelligent-next-best-action-platform/
+│
+├── src/
+│   ├── api/
+│   ├── assets/
+│   ├── components/
+│   │   ├── dashboard/
+│   │   ├── layout/
+│   │   └── ui/
+│   ├── entities/
+│   ├── hooks/
+│   ├── pages/
+│   ├── utils/
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── public/
+├── package.json
+├── vite.config.js
+├── tailwind.config.js
+└── README.md
+```
+
+---
+
+## 🚀 Getting Started
+
+### Clone the Repository
 
 ```bash
-base44 dev
+git clone https://github.com/pranathi-vnr/intelligent-next-best-action-platform.git
+
+cd intelligent-next-best-action-platform
 ```
 
-`base44 dev` starts the local Base44 development backend and, when this app is configured for it, also starts the frontend dev server for you. Use the frontend URL printed by the command.
+### Install Dependencies
 
-For example, when the Base44 project config includes a `serveCommand`, `base44 dev` can launch the frontend too:
-
-```json5
-{
-  "site": {
-    "serveCommand": "npm run dev"
-  }
-}
+```bash
+npm install
 ```
 
-In a Base44 project this lives in `base44/config.jsonc`.
-
-## Run Only The Frontend
-
-If you only want to work on the frontend against the hosted Base44 backend, run:
+### Run the Development Server
 
 ```bash
 npm run dev
 ```
 
-Open the local URL printed by Vite.
+The application will be available at:
 
-## Use The Hosted Backend
-
-For frontend-only development, create or update `.env.local` in the project root:
-
-```bash
-VITE_BASE44_APP_ID=your_app_id
-VITE_BASE44_APP_BASE_URL=https://your-app.base44.app
+```text
+http://localhost:5173
 ```
 
-`VITE_BASE44_APP_ID` identifies the Base44 app.
-
-`VITE_BASE44_APP_BASE_URL` tells the Base44 Vite plugin where to send local `/api` requests. Point it at your deployed Base44 app URL when you want the local frontend to use the hosted backend.
-
-When you use `base44 dev`, the command injects the local Base44 values for you, so `.env.local` is mainly needed for frontend-only workflows.
-
-## Publish Your Changes
-
-After pushing your changes to git, open the Base44 dashboard and publish the app:
+### Build for Production
 
 ```bash
-base44 dashboard open
+npm run build
 ```
 
-## Docs & Support
+---
 
-Documentation: [https://docs.base44.com/Integrations/Using-GitHub](https://docs.base44.com/Integrations/Using-GitHub)
+## 📸 Screenshots
 
-Base44 CLI command reference: [https://docs.base44.com/developers/references/cli/commands/introduction](https://docs.base44.com/developers/references/cli/commands/introduction)
+> Add screenshots after deployment.
 
-Support: [https://app.base44.com/support](https://app.base44.com/support)
+| Dashboard       | Customer Timeline |
+| --------------- | ----------------- |
+| *(Coming Soon)* | *(Coming Soon)*   |
+
+| Recommendations | Analytics       |
+| --------------- | --------------- |
+| *(Coming Soon)* | *(Coming Soon)* |
+
+---
+
+## 🎯 Business Value
+
+* Improve customer engagement and retention
+* Detect customer risks proactively
+* Recommend data-driven next best actions
+* Enable faster business decision-making
+* Increase Customer Success team productivity
+* Deliver transparent and explainable AI recommendations
+
+---
+
+## 🔮 Future Enhancements
+
+* Salesforce Integration
+* HubSpot Integration
+* Email & Calendar Integration
+* Slack & Microsoft Teams Notifications
+* Predictive Customer Analytics
+* Multi-LLM Support
+* Real-Time Collaboration
+* Automated Workflow Execution
+* Advanced Reporting & Insights
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork this repository.
+2. Create a feature branch.
+
+```bash
+git checkout -b feature/your-feature
+```
+
+3. Commit your changes.
+
+```bash
+git commit -m "Add your feature"
+```
+
+4. Push the branch.
+
+```bash
+git push origin feature/your-feature
+```
+
+5. Open a Pull Request.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
